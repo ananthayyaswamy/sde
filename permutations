@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+    static Set<String>set=new TreeSet<String>();
+		public static void main (String[] args) {
+			Scanner sc=new Scanner(System.in);
+		//	System.out.println("input test");
+			int t=sc.nextInt();
+			sc.nextLine();
+			while(t!=0){
+			//	System.out.println("enter string");
+			    String s=sc.nextLine();
+			    printpermutation(s,"");
+			    for(String s1:set){
+			    	System.out.print(s1+" ");
+			    }
+			    set.clear();
+			    System.out.println();
+			    t--;
+			    
+			}
+		}
+		static void printpermutation(String str,String ans){
+			
+		    if(str.length()==0){
+		        //System.out.print(ans+" ");
+		    	set.add(ans);
+		        //count++;
+		        return;
+		    }
+		    for(int i=0;i<str.length();i++){
+		        char ch=str.charAt(i);
+		        String res=str.substring(0,i)+str.substring(i+1);
+		        printpermutation(res,ans+ch);
+		    }
+		}
+	}
