@@ -1,0 +1,28 @@
+import java.util.*;
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        ArrayList<String> li=new ArrayList<String>();
+        if(digits!=null&&digits.length()>0){
+        String map[]= {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+         
+        dfs(digits,map,li,new StringBuilder(),0);
+        }
+        return li;
+    }
+    static void dfs(String digits,String[] map,ArrayList<String> li,StringBuilder sb,int index){
+        if(index==digits.length()){
+            li.add(sb.toString());
+            return;
+        }
+        int digit=Character.getNumericValue(digits.charAt(index));
+        String letters=map[digit]; 
+        for(int i=0;i<letters.length();i++){
+            char ch=letters.charAt(i);
+            sb.append(ch);
+            dfs(digits,map,li,sb,index+1);
+            sb.deleteCharAt(sb.length()-1);
+        }
+    } 
+    
+    
+}
