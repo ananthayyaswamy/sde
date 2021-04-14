@@ -28,4 +28,14 @@ class Solution {
         }
      return li;   
     }
+    //RECURSIVE CODE
+    public List<Integer> dfs(TreeNOde root,List<Integer>list){
+    if(root==null){
+    return list;
+    }
+    list=dfs(root.left,list);
+    list.add(root.val);
+    return dfs(root.right,list);
+}
+
 }
