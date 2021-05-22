@@ -1,0 +1,30 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:ananth arun 
+Company: zoho company
+TEL;TYPE=home;9876543
+EMAIL;TYPE=work;gmail
+ADDRESS;TYPE=home;manjoor
+BDAY: 3-2-2001
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:gokul krishnan 
+Company: apple
+TEL;TYPE=home;00000011122
+EMAIL;TYPE=work;18f211@gmail.com
+ADDRESS;TYPE=home;kinnathukadavu
+BDAY: 3/9/2000
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:rio ram 
+Company: rio company
+TEL;TYPE=home;98766432
+TEL;TYPE=work;0423-987
+EMAIL;TYPE=home;@home.gmail
+EMAIL;TYPE=work;
+ADDRESS;TYPE=home;chennai
+ADDRESS;TYPE=work;america
+BDAY: 3/2/1980
+END:VCARD
